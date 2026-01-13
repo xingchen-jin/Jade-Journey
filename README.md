@@ -8,21 +8,39 @@ Designed by JinJiaWei , ZUST_CS241, 12406960344
 
 核心亮点 / Highlights
 ---------------------
-- 约 4,300+ 行 Java 代码，单线程游戏循环，键盘全局驱动。
-- 自研 2D 像素管线：瓦片地图、精灵动画、基础碰撞、对话/菜单 UI。
-- 回合制战斗框架：技能、属性数据、基础伤害流程与状态管理。
-- 资源加载与分层：地图/角色/精灵素材、音频与字体分目录管理。
+- 中文：
+	- 纯 Java 实现，无外部游戏引擎或框架依赖，便于教学与阅读。
+	- 约 4,300+ 行 Java 代码，单线程游戏循环，键盘全局驱动。
+	- 自研 2D 像素管线：瓦片地图、精灵动画、基础碰撞、对话/菜单 UI。
+	- 回合制战斗框架：技能、属性数据、基础伤害流程与状态管理。
+	- 资源加载与分层：地图/角色/精灵素材、音频与字体分目录管理。
+- English:
+	- Pure Java implementation with no external game engine or framework dependencies, easy to read and teach.
+	- ~4,300+ lines of Java with a single-threaded game loop and keyboard-driven control.
+	- Custom 2D pixel pipeline: tilemaps, sprite animations, basic collision, dialogue/menu UI.
+	- Turn-based battle framework: moves, stat data, basic damage flow, and state handling.
+	- Layered asset loading: maps/characters/creatures, audio, and fonts organized by directories.
 
 架构与模块 / Architecture & Modules
 -----------------------------------
-- 游戏主循环与场景： [src/main/GamePanel.java](src/main/GamePanel.java), [src/main/Main.java](src/main/Main.java)
-- 输入与事件： [src/main/KeyHandler.java](src/main/KeyHandler.java), [src/main/EventHandler.java](src/main/EventHandler.java)
-- 瓦片与碰撞： [src/tile/TileManger.java](src/tile/TileManger.java), [src/main/CollisionChecker.java](src/main/CollisionChecker.java)
-- 实体与角色： [src/entity/Player.java](src/entity/Player.java), [src/entity/Entity.java](src/entity/Entity.java)
-- 战斗系统： [src/battle/BattleManger.java](src/battle/BattleManger.java), [src/battle/BattleSystem.java](src/battle/BattleSystem.java), [src/move](src/move)
-- 精灵数据： [src/pokemon/Pokemon.java](src/pokemon/Pokemon.java) 及子类 (Mudkip, Torchic, Treecko, Ralts, Poochyena)
-- 道具与背包： [src/item](src/item), [src/inventory/PokemonParty.java](src/inventory/PokemonParty.java)
-- 资源与工具： [src/utils/UtilityTool.java](src/utils/UtilityTool.java), [res](res)（地图、角色、音频、字体等）
+- 中文：
+	- 游戏主循环与场景： [src/main/GamePanel.java](src/main/GamePanel.java), [src/main/Main.java](src/main/Main.java)
+	- 输入与事件： [src/main/KeyHandler.java](src/main/KeyHandler.java), [src/main/EventHandler.java](src/main/EventHandler.java)
+	- 瓦片与碰撞： [src/tile/TileManger.java](src/tile/TileManger.java), [src/main/CollisionChecker.java](src/main/CollisionChecker.java)
+	- 实体与角色： [src/entity/Player.java](src/entity/Player.java), [src/entity/Entity.java](src/entity/Entity.java)
+	- 战斗系统： [src/battle/BattleManger.java](src/battle/BattleManger.java), [src/battle/BattleSystem.java](src/battle/BattleSystem.java), [src/move](src/move)
+	- 精灵数据： [src/pokemon/Pokemon.java](src/pokemon/Pokemon.java) 及子类 (Mudkip, Torchic, Treecko, Ralts, Poochyena)
+	- 道具与背包： [src/item](src/item), [src/inventory/PokemonParty.java](src/inventory/PokemonParty.java)
+	- 资源与工具： [src/utils/UtilityTool.java](src/utils/UtilityTool.java), [res](res)（地图、角色、音频、字体等）
+- English:
+	- Main loop & scenes: [src/main/GamePanel.java](src/main/GamePanel.java), [src/main/Main.java](src/main/Main.java)
+	- Input & events: [src/main/KeyHandler.java](src/main/KeyHandler.java), [src/main/EventHandler.java](src/main/EventHandler.java)
+	- Tiles & collision: [src/tile/TileManger.java](src/tile/TileManger.java), [src/main/CollisionChecker.java](src/main/CollisionChecker.java)
+	- Entities & characters: [src/entity/Player.java](src/entity/Player.java), [src/entity/Entity.java](src/entity/Entity.java)
+	- Battle system: [src/battle/BattleManger.java](src/battle/BattleManger.java), [src/battle/BattleSystem.java](src/battle/BattleSystem.java), [src/move](src/move)
+	- Pokemon data: [src/pokemon/Pokemon.java](src/pokemon/Pokemon.java) and subclasses (Mudkip, Torchic, Treecko, Ralts, Poochyena)
+	- Items & party: [src/item](src/item), [src/inventory/PokemonParty.java](src/inventory/PokemonParty.java)
+	- Assets & utils: [src/utils/UtilityTool.java](src/utils/UtilityTool.java), [res](res) (maps, characters, audio, fonts)
 
 状态 / Status
 -------------
@@ -31,10 +49,16 @@ Designed by JinJiaWei , ZUST_CS241, 12406960344
 
 操作 / Controls
 ---------------
-- W / A / S / D：控制角色与菜单指针
-- ENTER：确认、交互、播放钓鱼动画
-- I：切换调试模式
-- ESC：返回或打开菜单
+- 中文：
+	- W / A / S / D：控制角色与菜单指针
+	- ENTER：确认、交互、播放钓鱼动画
+	- I：切换调试模式
+	- ESC：返回或打开菜单
+- English:
+	- W / A / S / D: move character and menu cursor
+	- ENTER: confirm, interact, play fishing animation
+	- I: toggle debug mode
+	- ESC: back or open menu
 
 快速开始 / Getting Started
 --------------------------
@@ -51,20 +75,35 @@ java -cp bin main.Main
 
 功能 / Features
 ---------------
-- 2D 像素回合制框架：单线程游戏循环，输入驱动的状态切换。
-- 地图与碰撞：瓦片地图、碰撞体积、事件矩形（对话、交互触发）。
-- 战斗与技能：基础回合制流程、技能数据类、属性与伤害计算骨架。
-- 背包与道具：精灵队伍管理、基础道具定义与获取。
-- UI 与资源：文本窗口、菜单、音频播放、精灵/角色/地图素材加载。
-- 可扩展性：易于添加新地图、技能、道具、精灵与 UI 界面。
+- 中文：
+	- 2D 像素回合制框架：单线程游戏循环，输入驱动的状态切换。
+	- 地图与碰撞：瓦片地图、碰撞体积、事件矩形（对话、交互触发）。
+	- 战斗与技能：基础回合制流程、技能数据类、属性与伤害计算骨架。
+	- 背包与道具：精灵队伍管理、基础道具定义与获取。
+	- UI 与资源：文本窗口、菜单、音频播放、精灵/角色/地图素材加载。
+	- 可扩展性：易于添加新地图、技能、道具、精灵与 UI 界面。
+- English:
+	- 2D pixel turn-based framework: single-threaded loop with input-driven state changes.
+	- Maps & collision: tilemaps, hitboxes, event rectangles (dialog/interaction triggers).
+	- Battles & moves: turn-based flow, move data classes, stat/damage calculation skeleton.
+	- Inventory & items: party management plus basic item definitions and pickups.
+	- UI & assets: text windows, menus, audio playback, sprite/character/map loading.
+	- Extensibility: straightforward to add maps, moves, items, pokemon, and UI screens.
 
 系统摘要 / Systems
 ------------------
-- 战斗：管理战斗状态、技能释放、HP 结算与基础效果呈现。
-- 移动与交互：按键驱动角色移动，事件矩形触发对话/交互逻辑。
-- 资源加载：分目录管理地图 CSV、精灵帧、音频与字体，启动时按需加载。
-- UI/UX：文本窗口、菜单导航、战斗界面与提示层。
-- 调试支持：`I` 切换调试模式，便于查看坐标与碰撞。
+- 中文：
+	- 战斗：管理战斗状态、技能释放、HP 结算与基础效果呈现。
+	- 移动与交互：按键驱动角色移动，事件矩形触发对话/交互逻辑。
+	- 资源加载：分目录管理地图 CSV、精灵帧、音频与字体，启动时按需加载。
+	- UI/UX：文本窗口、菜单导航、战斗界面与提示层。
+	- 调试支持：`I` 切换调试模式，便于查看坐标与碰撞。
+- English:
+	- Battles: manage states, move execution, HP resolution, and basic effects.
+	- Movement & interaction: keyboard-driven motion with event rectangles for dialog/interaction triggers.
+	- Asset loading: organized map CSVs, sprite frames, audio, and fonts; loaded on demand at startup.
+	- UI/UX: text windows, menu navigation, battle UI, and prompts.
+	- Debug: `I` toggles debug mode to inspect positions and collisions.
 
 目录结构（示例）/ Project Structure (example)
 -------------------------------------------
